@@ -1,0 +1,9 @@
+Input -> Array of intergers (num)
+Output -> return length of longest consecutive sequence (integer)
+
+Must run in O(n) time
+
+use set so that all the num is unique
+num_set = set(nums);
+
+loop through set to check for n-1, if n-1 exist, counter +1
