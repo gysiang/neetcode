@@ -7,3 +7,8 @@ use set so that all the num is unique
 num_set = set(nums);
 
 loop through set to check for n-1, if n-1 exist, counter +1
+
+if n - 1 does not exist, streak = 1
+
+loop n + 1 to check if they exist in loop,
+if exist streak +=1 else break
