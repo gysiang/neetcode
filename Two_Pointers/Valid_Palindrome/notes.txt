@@ -1,0 +1,11 @@
+### Time Complexity
+- O(n)
+
+### Pattern
+- Two Pointer
+
+### Notes
+- if the pointer is on a character that is not alphabet or number, move to the next char
+- this goes for the left and right pointer
+- if the character for left and right pointer is not equal, return false
+- else move both pointers
