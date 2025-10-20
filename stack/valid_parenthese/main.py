@@ -1,19 +1,17 @@
 class Solution:
     def isValid(self, s: str) -> bool:
+        if not s:
+            return True
         stack = []
-        map = {')':'(', ']':'[', '}':'{'}
+        bracket_map = {')': '(', ']': '[', '}': '{'}
         for char in s:
-            #if open brackets insert into stack
-            if (char in map.values()):
+            if char in bracket_map.values():
                 stack.append(char)
+            elif char in bracket_map:
+                if not stack or bracket_map[char] != stack.pop():
+                    return False
             else:
-                #check if there is anything in stack
-                if (len(stack) > 0):
-                    tmp = stack.pop()
-                    if (map[char] != tmp):
-                        return (False)
-                else:
-                # if there are nothing to pop, it must be wrong
-                    return (False)
-        #check if the stack is empty, if not empty return False
-        return (not stack)     
+                # Character is not a valid bracket, could be an edge case
+                # depending on problem constraints. Assuming only brackets are in s.
+                pass
+        return not stack
