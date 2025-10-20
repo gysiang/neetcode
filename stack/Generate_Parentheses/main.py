@@ -1,3 +1,4 @@
+from typing import List
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
         res = []
@@ -11,6 +12,3 @@ class Solution:
                 backtrack(o, c+1, path + ")")
         backtrack(0, 0, "")
         return res
-
-c = Solution()
-c.generateParenthesis(2)
