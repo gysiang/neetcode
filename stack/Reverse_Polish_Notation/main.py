@@ -1,3 +1,4 @@
+from typing import List
 class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
         stack = []
@@ -14,6 +15,6 @@ class Solution:
                     stack.append(left - right)
                 elif token == '*':
                     stack.append(left * right)
-                else: 
+                else:
                     stack.append(int(left / right))
-        return stack.pop() 
+        return stack.pop()
